@@ -10,13 +10,10 @@ body {
 .container {
   display: grid;
   grid-template-columns: repeat(6, 100px);
-  grid-template-rows: repeat(1, 100px);
-  grid-template-areas:
-  "r g c b p y"
-  ;
+  grid-template-rows: repeat(6, 100px);
 
   width: 100%;
-  height: auto;
+  height: 100%;
   background-color: silver;
 
   justify-content: center;
@@ -27,31 +24,82 @@ body {
 }
 
 .container > div {
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
+}
+
+.container p {
+  font-size: 40px;
+  margin: 0;
+  text-align: center;
+  margin-top:20px;
 }
 
 .box1 {
   background: hsl(0, 60%, 60%);
-  grid-area: r;
+  border-radius: 20px;
 }
 .box2 {
   background: hsl(60, 60%, 60%);
-  grid-area: y;
+  border-radius: 20px;
 }
 .box3 {
   background: rgb(92, 214, 92);
-  grid-area: g;
+  border-radius: 20px;
 }
 .box4 {
   background: hsl(180, 60%, 60%);
-  grid-area: c;
+  border-radius: 20px;
 }
 .box5 {
   background: hsl(240, 60%, 60%);
-  grid-area: b;
+  border-radius: 20px;
 }
 .box6 {
   background: hsl(300, 60%, 60%);
-  grid-area: p;
+  border-radius: 20px;
+}
+
+@media (min-width:800px) {
+  body {
+    background-color: #eee;
+  }
+
+  .container {
+    background-color: #473636;
+    display: grid;
+  }
+
+  .container p {
+    font-size: 40px;
+    margin: 0;
+    margin-top: 22px;
+    text-align: center;
+    color: #fff;
+  }
+
+  .box1 {
+    background: hsl(0, 60%, 60%);
+    border-radius: 50%;
+  }
+  .box2 {
+    background: hsl(60, 60%, 60%);
+    border-radius: 50%;
+  }
+  .box3 {
+    background: rgb(92, 214, 92);
+    border-radius: 50%;
+  }
+  .box4 {
+    background: hsl(180, 60%, 60%);
+    border-radius: 50%;
+  }
+  .box5 {
+    background: hsl(240, 60%, 60%);
+    border-radius: 50%;
+  }
+  .box6 {
+    background: hsl(300, 60%, 60%);
+    border-radius: 50%;
+  }
 }
