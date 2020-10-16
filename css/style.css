@@ -1,0 +1,57 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(6, 100px);
+  grid-template-rows: repeat(1, 100px);
+  grid-template-areas:
+  "r g c b p y"
+  ;
+
+  width: 100%;
+  height: auto;
+  background-color: silver;
+
+  justify-content: center;
+  align-content: center;
+
+  justify-items: start;
+  align-items: center;
+}
+
+.container > div {
+  width: 50px;
+  height: 50px;
+}
+
+.box1 {
+  background: hsl(0, 60%, 60%);
+  grid-area: r;
+}
+.box2 {
+  background: hsl(60, 60%, 60%);
+  grid-area: y;
+}
+.box3 {
+  background: rgb(92, 214, 92);
+  grid-area: g;
+}
+.box4 {
+  background: hsl(180, 60%, 60%);
+  grid-area: c;
+}
+.box5 {
+  background: hsl(240, 60%, 60%);
+  grid-area: b;
+}
+.box6 {
+  background: hsl(300, 60%, 60%);
+  grid-area: p;
+}
